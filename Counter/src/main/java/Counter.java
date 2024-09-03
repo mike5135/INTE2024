@@ -10,4 +10,6 @@ public class Counter {
 
         return value;
     }
+// test 2
+
 }
