@@ -19,13 +19,9 @@ public class Counter {
     }
 
     public String toString() {
-
-
         int p = 3;
         String s = "Hi";
-
         return "This is the current value 1 + 23"  + p + s + value;
-
     }
 
     // test push, one more

@@ -20,7 +20,7 @@ public class CounterTest {
         Counter c = new Counter();
         c.inc();
         assertEquals(2, c.getValue());
-        //Dorra
+
     }
 
     @Test
@@ -33,7 +33,7 @@ public class CounterTest {
     @Test
     void toStringReturnsCorrectString() {
         Counter c = createCounterWithValueOne();
-        assertEquals("This is the current value 1", c.toString());
+        assertEquals("This is the current value 1 + 233Hi2", c.toString()); // varför c.toString() här?
     }
 
     @Test
