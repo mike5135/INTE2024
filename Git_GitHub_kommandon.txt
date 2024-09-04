@@ -1,0 +1,80 @@
+1. Grundläggande Git-kommandon
+
+    git init: Initierar ett nytt Git-repository i den aktuella mappen.
+    git clone [repository-url]: Klonar ett existerande Git-repository från en server (som GitHub) till din lokala maskin.
+    git status: Visar status för ändringar i ditt lokala repository, inklusive ändringar som inte är tillagda till staging-området.
+    git add [filnamn]: Lägg till en specifik fil till staging-området. Använd git add . för att lägga till alla ändrade filer.
+    git commit -m "meddelande": Skapa en commit med ett meddelande som beskriver de gjorda ändringarna.
+    git push: Skickar dina lokala commits till en fjärrrepository (som GitHub).
+    git pull: Hämtar och slår ihop ändringar från fjärrrepositoryn till din lokala branch.
+    git log: Visar en logg över tidigare commits i repositoryt.
+
+2. Arbeta med brancher
+
+    git branch: Visar alla lokala brancher, och markerar den nuvarande aktiva branchen.
+    git branch [branch-namn]: Skapar en ny branch med namnet du anger.
+    git checkout [branch-namn]: Byter till en specifik branch.
+    git merge [branch-namn]: Slår ihop en specifik branch med den nuvarande aktiva branchen.
+    git branch -d [branch-namn]: Tar bort en lokal branch som inte längre behövs.
+
+3. Arbeta med fjärrrepositories
+
+    git remote -v: Visar vilka fjärrrepositories som är kopplade till ditt lokala repository.
+    git fetch: Hämtar data från fjärrrepositoryn utan att slå ihop det med din lokala branch.
+    git pull origin [branch-namn]: Hämtar och slår ihop ändringar från en specifik branch på fjärrrepositoryn.
+    git push origin [branch-namn]: Skickar dina commits till en specifik branch på fjärrrepositoryn.
+
+4. Ångra ändringar
+
+    git reset [filnamn]: Tar bort en fil från staging-området.
+    git reset --hard [commit-id]: Återställ hela repositoryt till ett specifikt commit.
+    git revert [commit-id]: Skapar en ny commit som ångrar en specifik tidigare commit.
+
+5. GitHub-specifika kommandon
+
+    git remote add origin [repository-url]: Lägger till en fjärrrepository (t.ex. GitHub) till ditt lokala repository.
+    git push -u origin [branch-namn]: Skapar en ny branch på GitHub och pushar dina ändringar.
+    git clone [repository-url]: Klonar ett GitHub-repository till din lokala maskin.
+    
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+När man arbetar med Git i IntelliJ IDEA:
+
+1. Initiera och Klona ett Repository
+
+    Initiera Git: Du kan initiera ett nytt Git-repository genom att gå till VCS (Version Control System) > Enable Version Control Integration... och välja Git.
+    Klona ett Repository: För att klona ett GitHub-repository, gå till VCS > Git > Clone... och klistra in URL
+    till repositoryt. IntelliJ kommer att klona repositoryt till din lokala maskin.
+
+2. Staging och Commit
+
+    Staging (Git Add): När du gör ändringar i dina filer, kommer de automatiskt att visas i "Local Changes" (som finns i Version Control-panelen). Du kan välja filer här och "stage" dem för commit genom att högerklicka och välja Add to VCS.
+    Commit: När dina filer är staged, klicka på Commit-knappen längst ner till höger i IntelliJ. Du kan skriva ett commit-meddelande och klicka på Commit eller Commit and Push för att skicka ändringarna direkt till fjärrrepositoryt.
+
+3. Push och Pull
+
+    Push: Efter att ha gjort en commit, kan du använda VCS > Git > Push... för att skicka dina commits till fjärrrepositoryt (GitHub).
+    Pull: För att hämta de senaste ändringarna från fjärrrepositoryt, kan du använda VCS > Git > Pull....
+
+4. Hantera Brancher
+
+    Skapa en ny branch: Klicka på branch-ikonen längst ner till höger eller gå till VCS > Git > Branches.... Här kan du skapa en ny branch genom att klicka på New Branch.
+    Byta Branch: Du kan byta till en annan branch genom samma Branches...-meny och välja den branch du vill arbeta på.
+    Merging Branches: För att slå ihop en branch med din nuvarande branch, välj Merge into Current från Branches...-menyn.
+
+5. Visa och Ångra Ändringar
+
+    Visa ändringar: IntelliJ visar ändringar i en visuell diff-vy där du kan se exakt vad som har ändrats i dina filer. Detta kan nås genom att klicka på en ändrad fil i Version Control-panelen.
+    Ångra ändringar: Om du vill ångra ändringar kan du högerklicka på en fil och välja Revert för att återgå till den senaste commit-versionen.
+
+6. Konflikthantering
+
+    Merge-konflikter: Om du stöter på merge-konflikter när du slår ihop brancher, kommer IntelliJ att ge dig en GUI-baserad konfliktlösningsverktyg där du kan välja vilka ändringar som ska behållas.
+
+7. Integrera med GitHub
+
+    GitHub-plugin: IntelliJ IDEA har inbyggt stöd för GitHub, och du kan logga in direkt via Settings > Version Control > GitHub för att hantera pull requests, issues, och mer.
+
+8. Användning av Terminal
+
+    Terminal: IntelliJ har en inbyggd terminal som du kan använda om du vill köra vanliga Git-kommandon direkt, som om du jobbade i en vanlig terminal.
