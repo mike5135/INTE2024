@@ -1,0 +1,7 @@
+package inte;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class CounterTest {
+
+}
